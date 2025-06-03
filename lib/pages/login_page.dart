@@ -24,7 +24,7 @@ class _LoginPageState extends State<LoginPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
-
+          //
           children: [
             Center(child: Text("Login Page", style: TextStyle(fontSize: 36))),
             SizedBox(height: 48),
@@ -38,7 +38,6 @@ class _LoginPageState extends State<LoginPage> {
                   emailController.text,
                   passwordController.text,
                 );
-
                 if (user != null) {
                   Navigator.of(context).pushAndRemoveUntil(
                     MaterialPageRoute(builder: (context) => HomePage()),
