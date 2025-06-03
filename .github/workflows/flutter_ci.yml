@@ -20,10 +20,10 @@ jobs:
       with:
         flutter-version: '3.32.0' # or your current Flutter version
 
-    - name: Restore firebase_options.dart from secret
-      run: |
-        mkdir -p lib
-        echo "${{ secrets.FIREBASE_OPTIONS }}" > lib/firebase_options.dart
+    # - name: Restore firebase_options.dart from secret
+      # run: |
+        # mkdir -p lib
+        # echo "${{ secrets.FIREBASE_OPTIONS }}" > lib/firebase_options.dart
 
     - name: Install dependencies
       run: flutter pub get
