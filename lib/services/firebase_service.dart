@@ -8,7 +8,6 @@ Future<User?> signInWithEmail(String email, String password) async {
     );
     return credential.user;
   } on FirebaseAuthException catch (e) {
-    print('Login error: $e');
     return null;
   }
 }
@@ -19,7 +18,6 @@ Future<User?> registerWithEmail(String email, String password) async {
         .createUserWithEmailAndPassword(email: email, password: password);
     return credential.user;
   } on FirebaseAuthException catch (e) {
-    print('Registration error: $e');
     return null;
   }
 }
